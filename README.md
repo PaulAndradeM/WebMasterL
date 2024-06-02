@@ -1,6 +1,6 @@
 # 💻  WebMasterL  💻
 
- | Nuestra web! |
+
 >
 >Aqui podremos:
 >
