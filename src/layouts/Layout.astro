@@ -1,5 +1,4 @@
 ---
-// Importa tus componentes de encabezado y pie de página
 import Header from '@/layouts/Header.astro';
 import Footer from '@/layouts/Footer.astro';
 
@@ -29,10 +28,28 @@ const { title } = Astro.props;
 	</body>
 </html>
 
-<style>
-	main {
-		margin: 0 auto;
-		max-width: 80rem;
-		min-height: 100svh;
+<style is:global>
+	:root {
+		--primary: #405484;
+		--secondary: #397bc1;
+		--tertiary: #1c4066;
+		--light-blue: #dceafc;
+		--gray: #333;
+		--light-gray: #cccccc;
+		--black: #0c0c0c;
+		--white: #f1f1f1;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-size: 100%;
+		font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
 	}
 </style>
