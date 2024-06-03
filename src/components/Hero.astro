@@ -4,8 +4,8 @@
 		<h2>~impecable~</h2>
 		<p>Comunicanos tus ideas para poder relizarlas. Somos muy eficaces y actualizados.</p>
 		<div>
-			<button>Reunete con nosotros</button>
-			<button>Contacto</button>
+			<button class='btn-primary'>Reunete con nosotros</button>
+			<button class='btn-secondary'>Contacto</button>
 		</div>
 	</div>
 </header>
@@ -14,7 +14,6 @@
 	header {
 		width: 100%;
 		min-height: calc(100vh - 4rem);
-		/* background-color: var(--secondary); */
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -40,24 +39,36 @@
 		font-size: 1em;
 	}
 	header > div > div {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1rem;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 3rem;
+		width: fit-content;
+		margin: 0 auto;
 	}
 	button {
-		background-color: rgba(0, 0, 0, 0.2);
+		background-color: var(--primary);
 		color: var(--white);
 		padding: 1rem 2rem;
 		border: none;
 		cursor: pointer;
-		margin: 0 auto;
 		box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
 		font-size: 1em;
+		border-radius: 1rem;
 		transition: background-color 0.2s ease;
 	}
-	button:hover {
-		background-color: rgba(0, 0, 0, 0.3);
+	.btn-primary {
+		background-color: #229e98;
 	}
+	.btn-primary:hover {
+		background-color: #27a8a2;
+	}
+	.btn-secondary {
+		background-color: #435ca7;
+	}
+	.btn-secondary:hover {
+		background-color: #4c67b9;
+	}
+
 	@media screen and (min-width: 48rem) {
 		header {
 			font-size: 1.5em;
