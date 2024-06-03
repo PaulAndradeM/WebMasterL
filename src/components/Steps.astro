@@ -1,0 +1,42 @@
+---
+import Card from './Card.astro';
+---
+
+<section>
+	<Card title='Contacto' icon='/icons/step_1.svg' image='/images/step_1.jpg'
+		><p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officiis suscipit doloribus amet culpa
+			iste possimus quia magni excepturi ex, expedita architecto odio? Quidem esse saepe dicta velit beatae
+			quia.
+		</p></Card
+	>
+	<Card title='Construcción' icon='/icons/step_2.svg' image='/images/step_2.jpg'
+		><p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officiis suscipit doloribus amet culpa
+			iste possimus quia magni excepturi ex, expedita architecto odio? Quidem esse saepe dicta velit beatae
+			quia.
+		</p></Card
+	>
+	<Card title='Presentacion' icon='/icons/step_3.svg' image='/images/step_3.jpg'
+		><p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officiis suscipit doloribus amet culpa
+			iste possimus quia magni excepturi ex, expedita architecto odio? Quidem esse saepe dicta velit beatae
+			quia.
+		</p></Card
+	>
+</section>
+
+<style>
+	section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		width: 100%;
+		min-height: 100vh;
+		gap: 1rem;
+		max-width: 80rem;
+		padding: 1rem;
+		margin: 0 auto;
+		align-items: center;
+	}
+</style>

@@ -31,10 +31,10 @@ const { title } = Astro.props;
 <style is:global>
 	:root {
 		--primary: #2371cf;
-		--secondary: #7AB2B2;
-		--tertiary: #4D869C;
-		--light-green: #CDE8E5;
-		--light-blue: #EEF7FF;
+		--secondary: #7ab2b2;
+		--tertiary: #4d869c;
+		--light-green: #cde8e5;
+		--light-blue: #eef7ff;
 		--gray: #333;
 		--light-gray: #cccccc;
 		--black: #0c0c0c;
@@ -57,11 +57,15 @@ const { title } = Astro.props;
 
 	body {
 		overflow-x: hidden;
-		min-height: 200vh;z
+		min-height: 300vh;
 		font-size: 100%;
 		font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
 	}
 	main {
 		padding: 4rem 0 0;
+		display: flex;
+		flex-direction: column;
+		gap: 5rem;
+		width: 100%;
 	}
 </style>
