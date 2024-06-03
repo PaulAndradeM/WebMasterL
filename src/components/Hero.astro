@@ -1,0 +1,66 @@
+<header>
+	<div>
+		<h2>De idea a proyecto</h2>
+		<h2>~impecable~</h2>
+		<p>Comunicanos tus ideas para poder relizarlas. Somos muy eficaces y actualizados.</p>
+		<div>
+			<button>Reunete con nosotros</button>
+			<button>Contacto</button>
+		</div>
+	</div>
+</header>
+
+<style>
+	header {
+		width: 100%;
+		min-height: calc(100vh - 4rem);
+		/* background-color: var(--secondary); */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: var(--white);
+		text-align: center;
+		padding: 0 1rem;
+		text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+	}
+
+	header > div {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		width: fit-content;
+		max-width: 50rem;
+	}
+	h2 {
+		font-size: 2.5em;
+	}
+	p {
+		margin: 1.5rem 0;
+		font-size: 1em;
+	}
+	header > div > div {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+	button {
+		background-color: rgba(0, 0, 0, 0.2);
+		color: var(--white);
+		padding: 1rem 2rem;
+		border: none;
+		cursor: pointer;
+		margin: 0 auto;
+		box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+		font-size: 1em;
+		transition: background-color 0.2s ease;
+	}
+	button:hover {
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+	@media screen and (min-width: 48rem) {
+		header {
+			font-size: 1.5em;
+		}
+	}
+</style>

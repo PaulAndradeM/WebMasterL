@@ -46,12 +46,20 @@ const { title } = Astro.props;
 	}
 	html {
 		scroll-behavior: smooth;
+		background: #2885f2;
+		background-image: radial-gradient(at 35% 100%, hsl(246, 98%, 68%) 0px, transparent 50%),
+			radial-gradient(at 96% 55%, hsl(198, 88%, 56%) 0px, transparent 50%),
+			radial-gradient(at 92% 90%, hsl(231, 71%, 36%) 0px, transparent 50%),
+			radial-gradient(at 99% 85%, hsl(152, 67%, 60%) 0px, transparent 50%),
+			radial-gradient(at 11% 82%, hsl(116, 64%, 23%) 0px, transparent 50%);
 	}
 
 	body {
-		overflow: hidden;
-
+		overflow-x: hidden;
 		font-size: 100%;
 		font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+	}
+	main {
+		padding: 4rem 0 0;
 	}
 </style>
