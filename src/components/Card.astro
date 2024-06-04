@@ -34,7 +34,7 @@ const { title, icon, image } = Astro.props;
 		transition: 0.5s ease;
 	}
 	article:hover .icon {
-		transform: scale(1.2);
+		transform: perspective(1000px) rotateY(180deg) scale(1.1);
 	}
 
 	.image {
@@ -56,9 +56,7 @@ const { title, icon, image } = Astro.props;
 	h2 {
 		font-size: 1.5rem;
 		margin: 0.5rem 0;
-		font-family:
-            "Courier New",
-            Courier;
+		font-family: 'Courier New', Courier;
 	}
 
 	.icon-container {
