@@ -6,9 +6,9 @@
 
 	<nav id='nav-menu'>
 		<ul>
-			<li><a href='#'>Inicio</a></li>
-			<li><a href='#'>Servicios</a></li>
-			<li><a href='#'>Contacto</a></li>
+			<li><a href='#Init'>Inicio</a></li>
+			<li><a href='#Projects'>Proyectos</a></li>
+			<li><a href="mailto:webmasterl@webmasterl.es">Contacto</a></li>
 		</ul>
 	</nav>
 </header>
@@ -28,13 +28,15 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		background-color: var(--primary);
+		background-color: #6980aa44;
+		backdrop-filter: blur(6px);
 		height: 4rem;
 		padding: 1rem;
 		position: fixed;
 		text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
 		width: 100%;
 		box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+		z-index: 1000;
 	}
 	img {
 		width: 10rem;
@@ -104,7 +106,8 @@
 			transition: transform 0.3s ease;
 			padding: 3rem 0;
 			height: calc(100vh - 4rem);
-			background-color: var(--primary);
+			background-color: #5c616473;
+			backdrop-filter: blur(40px);
 			justify-content: center;
 			align-items: flex-start;
 		}
