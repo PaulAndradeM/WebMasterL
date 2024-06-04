@@ -1,27 +1,30 @@
 ---
-import Card from './Card.astro';
+import Card from '@/components/Card.astro';
 ---
 
 <section>
 	<Card title='Contacto' icon='/icons/step_1.svg' image='/images/step_1.jpg'
 		><p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officiis suscipit doloribus amet culpa
-			iste possimus quia magni excepturi ex, expedita architecto odio? Quidem esse saepe dicta velit beatae
-			quia.
+			Contactanos o agenda una reunión para discutir tus ideas. Nos encantaría que te ayuden a crear un proyecto
+			que te guste.
+			<br />
+			<br />
+			Si tienes una idea en mente, no dudes en enviarnos un email.
 		</p></Card
 	>
 	<Card title='Construcción' icon='/icons/step_2.svg' image='/images/step_2.jpg'
-		><p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officiis suscipit doloribus amet culpa
-			iste possimus quia magni excepturi ex, expedita architecto odio? Quidem esse saepe dicta velit beatae
-			quia.
+		><p class="text-center">
+			Construiremos tu pagina de una manera profesiona, con metodologia y 
+			pedagogía para que sea fiel a tu idea.
 		</p></Card
 	>
-	<Card title='Presentacion' icon='/icons/step_3.svg' image='/images/step_3.jpg'
+	<Card title='Presentación' icon='/icons/step_3.svg' image='/images/step_3.jpg'	
 		><p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officiis suscipit doloribus amet culpa
-			iste possimus quia magni excepturi ex, expedita architecto odio? Quidem esse saepe dicta velit beatae
-			quia.
+			Te Daremos tu propuesta convertida en un proyecto de gran calidad.
+			<br />
+			<br />
+			Nos caracteriza nuestra buena atencion a los detalles y nuestro compromiso
+			con la calidad de tu proyecto.
 		</p></Card
 	>
 </section>
@@ -38,5 +41,11 @@ import Card from './Card.astro';
 		padding: 1rem;
 		margin: 0 auto;
 		align-items: center;
+	}
+	.text-center {
+		line-height: 1.5;
+	}
+	p{
+		font-weight: 410;
 	}
 </style>

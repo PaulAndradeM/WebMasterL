@@ -1,11 +1,11 @@
-<header>
+<header id="Init">
 	<div>
 		<h2>De idea a proyecto</h2>
-		<h2>~impecable~</h2>
+		<h2><string>impecable</string></h2>
 		<p>Comunicanos tus ideas para poder relizarlas. Somos muy eficaces y actualizados.</p>
 		<div>
-			<button class='btn-primary'>Reunete con nosotros</button>
-			<button class='btn-secondary'>Contacto</button>
+			<button class='btn-primary'><a target="_blank" href="https://cal.com/webmasterl">Reunete con nosotros</a></button>
+			<button class='btn-secondary'><a href="mailto:webmasterl@webmasterl.es">Contacto</a></button>
 		</div>
 	</div>
 </header>
@@ -23,6 +23,8 @@
 		padding: 0 1rem;
 		text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
 	}
+
+	
 
 	header > div {
 		display: flex;
@@ -51,23 +53,31 @@
 		padding: 1rem 2rem;
 		border: none;
 		cursor: pointer;
-		box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+		
 		font-size: 1em;
 		border-radius: 1rem;
 		transition: background-color 0.2s ease;
+		text-decoration: none;
 	}
 	.btn-primary {
-		background-color: #229e98;
+		background-color: #325883;
+		box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.2);
 	}
 	.btn-primary:hover {
-		background-color: #27a8a2;
+		background-color: #4a66c2;
 	}
 	.btn-secondary {
-		background-color: #435ca7;
+		background-color: transparent;
+		box-shadow: 0 0 4rem rgba(255, 255, 255, 0.171);
 	}
 	.btn-secondary:hover {
-		background-color: #4c67b9;
+		background-color: #4c67b913;
 	}
+	a {
+		text-decoration: none;
+		color: #FFF;
+	}
+
 
 	@media screen and (min-width: 48rem) {
 		header {
