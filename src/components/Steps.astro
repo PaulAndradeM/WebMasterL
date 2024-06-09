@@ -3,30 +3,54 @@ import Card from '@/components/Card.astro';
 ---
 
 <section>
-	<Card title='Contacto' icon='/icons/step_1.svg' image='/images/step_1.jpg'
+	<Card id='card_1' title='Contacto' icon='/icons/step_1.svg'
 		><p>
-			Contactanos o agenda una reunión para discutir tus ideas. Nos encantaría que te ayuden a crear un proyecto
-			que te guste.
-			<br />
-			<br />
-			Si tienes una idea en mente, no dudes en enviarnos un email.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget condimentum tortor. Quisque ac
+			viverra velit. Curabitur mattis nulla eu nunc interdum sagittis eget quis mauris. Suspendisse posuere
+			leo libero, sed laoreet lectus mattis vel. Aliquam erat volutpat. Sed bibendum lectus a dictum
+			hendrerit. Aenean convallis vestibulum blandit. Cras ac auctor sapien. Nam non suscipit purus, vitae
+			elementum mauris. Ut venenatis sollicitudin elit ullamcorper elementum. Sed a lacus quam
 		</p></Card
 	>
-	<Card title='Construcción' icon='/icons/step_2.svg' image='/images/step_2.jpg'
-		><p class="text-center">
-			Construiremos tu pagina de una manera profesiona, con metodologia y 
-			pedagogía para que sea fiel a tu idea.
-		</p></Card
-	>
-	<Card title='Presentación' icon='/icons/step_3.svg' image='/images/step_3.jpg'	
+	<Card id='card_2' title='Construcción' icon='/icons/step_2.svg'
 		><p>
-			Te Daremos tu propuesta convertida en un proyecto de gran calidad.
-			<br />
-			<br />
-			Nos caracteriza nuestra buena atencion a los detalles y nuestro compromiso
-			con la calidad de tu proyecto.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget condimentum tortor. Quisque ac
+			viverra velit. Curabitur mattis nulla eu nunc interdum sagittis eget quis mauris. Suspendisse posuere
+			leo libero, sed laoreet lectus mattis vel. Aliquam erat volutpat. Sed bibendum lectus a dictum
+			hendrerit. Aenean convallis vestibulum blandit. Cras ac auctor sapien. Nam non suscipit purus, vitae
+			elementum mauris. Ut venenatis sollicitudin elit ullamcorper elementum. Sed a lacus quam
 		</p></Card
 	>
+	<Card id='card_3' title='Presentación' icon='/icons/step_3.svg'
+		><p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget condimentum tortor. Quisque ac
+			viverra velit. Curabitur mattis nulla eu nunc interdum sagittis eget quis mauris. Suspendisse posuere
+			leo libero, sed laoreet lectus mattis vel. Aliquam erat volutpat. Sed bibendum lectus a dictum
+			hendrerit. Aenean convallis vestibulum blandit. Cras ac auctor sapien. Nam non suscipit purus, vitae
+			elementum mauris. Ut venenatis sollicitudin elit ullamcorper elementum. Sed a lacus quam
+		</p></Card
+	>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const card_1 = document.getElementById(`card_1`);
+			const card_2 = document.getElementById(`card_2`);
+			const card_3 = document.getElementById(`card_3`);
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('visible');
+						observer.unobserve(entry.target);
+					}
+				});
+			});
+
+			observer.observe(card_1);
+			observer.observe(card_2);
+			observer.observe(card_3);
+		});
+	</script>
 </section>
 
 <style>
@@ -39,11 +63,5 @@ import Card from '@/components/Card.astro';
 		max-width: 80rem;
 		padding: 1rem;
 		margin: 0 auto;
-	}
-	.text-center {
-		line-height: 1.5;
-	}
-	p{
-		font-weight: 410;
 	}
 </style>

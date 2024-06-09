@@ -2,22 +2,20 @@
 interface Props {
 	title: string;
 	icon: string;
-	image: string;
+	id: string;
 }
 
-const { title, icon, image } = Astro.props;
+const { title, icon, id } = Astro.props;
 ---
 
-<article>
-	<img class='image' src={image} alt={title} />
-	<div>
-		<h2>{title}</h2>
-		<slot />
-		<div class='icon-container'>
-			<img class='icon' src={icon} alt={title} />
-		</div>
+<article id={id}>
+	<div class='icon-container'>
+		<img class='icon' src={icon} alt={title} />
 	</div>
+	<h2>{title}</h2>
+	<slot />
 </article>
+
 <style>
 	article {
 		max-width: 25rem;
@@ -28,18 +26,44 @@ const { title, icon, image } = Astro.props;
 		transition: transform 0.3s;
 		overflow: hidden;
 		text-align: center;
+		align-items: center;
 		color: var(--black);
 		text-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.1);
 		z-index: 500;
 		transition: 0.5s ease;
+		background-color: #eef7ff;
+		position: relative;
+		gap: 1rem;
+		padding: 0 2rem 5rem;
 	}
 	article:hover .icon {
 		transform: perspective(1000px) rotateY(180deg) scale(1.1);
 	}
 
+	article::before {
+		content: '';
+		position: absolute;
+		background-color: #3c5b6f;
+		left: 50%;
+		width: 50%;
+		transform: translateX(-50%);
+		height: 0.7rem;
+		border-radius: 0 0 1rem 1rem;
+		transition: width 3s ease-in-out;
+	}
+	.visible::before {
+		width: 110%;
+	}
+
+	article::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+	}
+
 	.image {
 		width: 100%;
-		aspect-ratio: 16/8;
+		height: auto;
 		object-fit: cover;
 	}
 
@@ -48,43 +72,31 @@ const { title, icon, image } = Astro.props;
 		flex-direction: column;
 		align-items: center;
 		position: relative;
-		background-color: rgb(255, 255, 255, 0.5);
-		padding: 20% 1rem 20% 1rem;
-		width: 100%;
-		flex: 1;
 	}
 	h2 {
 		font-size: 1.5rem;
 		margin: 0.5rem 0;
-		font-family: 'Courier New', Courier;
+		font-weight: lighter;
 	}
 
 	.icon-container {
-		width: 30%;
+		margin-top: 2.5rem;
+		width: 40%;
 		aspect-ratio: 1 / 1;
 		border-radius: 50%;
-		position: absolute;
 		top: 0;
-		transform: translateY(-50%);
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: var(--light-blue);
 		box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 		padding: 1rem;
+		background-color: white;
+		border: 1px solid #aaa;
 	}
-	.icon-container::before {
-		content: '';
-		position: absolute;
-		inset: -1rem;
-		box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-		border: 1px solid var(--light-blue);
-		border-radius: 50%;
-	}
+
 	.icon {
 		transition: transform 0.3s ease;
 		width: 100%;
 		height: 100%;
-		filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.3));
 	}
 </style>
